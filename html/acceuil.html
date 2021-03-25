@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <title>Acceuil</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="index.css">
-        <script src="script.js" defer></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script> <!--Je lie mon doc avec jQuery-->
-    </head>
 
+<head>
+    <title>Acceuil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <!--Je lie mon doc avec jQuery-->
+</head>
+
+<body>
+    <header>
+        <menu>
+            <p>MENU</p>
+        </menu>
+    </header>
+    <section class="carrousel">
+        <h1>Le site</h1>
+        <img src="../images/image_exemple.jpg" alt="image de nature">
+    </section>
+    <form action="POST">
+        <textarea name="new_article" id="new_article" cols="90" rows="10"></textarea>
+        <button>Publier</button>
+    </form>
+    <img src="../images/rafraichir.svg" alt="rafraichir" width="2%" height="2%">
+    <section>
+        <article>
+            <p class="nomarticle">un article repose ici</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>copyright Théo</p>
+    </footer>
+
+
+</body>
 
 </html>
