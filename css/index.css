@@ -21,7 +21,7 @@ footer {
     background-color: grey;
 }
 
-article {
+#res {
     background-color: honeydew;
     height: 150px;
     display: flex;
