@@ -42,5 +42,7 @@ $(document).ready(function () {
         .always(function () { //à chaque requête
             alert("Requête effectuée");
         })
+    
+        //https://www.creativejuiz.fr/blog/tutoriels/infinite-slideshow-quelques-lignes-jquery
 })
 
