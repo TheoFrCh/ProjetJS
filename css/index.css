@@ -21,10 +21,12 @@ footer {
     background-color: grey;
 }
 
-article {
-    background-color: honeydew;
-    height: 150px;
+#feed {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+}
+.carte {
+    border: solid black 2px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
