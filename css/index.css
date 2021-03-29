@@ -21,10 +21,10 @@ footer {
     background-color: grey;
 }
 
-#res {
-    background-color: honeydew;
-    height: 150px;
+#feed {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    color: lightseagreen;
 }
