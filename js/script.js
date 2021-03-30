@@ -20,18 +20,18 @@ $(document).ready(function () {
                 const note = document.createElement("p")
 
                 titre.innerHTML = element.title //mon titre, avec la variable innerHTML va prendre pour valeur l'élément "title" de mon api
-                desc.innerHTML = "Description : "+ element.description
-                directeur.innerHTML = "Directeur"+ element.director
-                producteur.innerHTML = "producteur"+ element.producer
-                date.innerHTML = "Date de sortie :"+ element.release_date
-                duree.innerHTML = "Durée : "+ element.running_time
-                note.innerHTML = "Score Rotten tomatoes : "+ element.rt_score
-                
+                desc.innerHTML = "Description : " + element.description
+                directeur.innerHTML = "Directeur" + element.director
+                producteur.innerHTML = "producteur" + element.producer
+                date.innerHTML = "Date de sortie :" + element.release_date
+                duree.innerHTML = "Durée : " + element.running_time
+                note.innerHTML = "Score Rotten tomatoes : " + element.rt_score
+
                 carte.classList.add("carte")
-                carte.append(titre,desc,directeur,producteur,date,duree)
+                carte.append(titre, desc, directeur, producteur, date, duree)
 
                 $("#feed").append(carte) //replacer tout les éléments à l'interieur de mon id #feed par la balise h3 créée
-                
+
             });
         })
 
@@ -42,5 +42,39 @@ $(document).ready(function () {
         .always(function () { //à chaque requête
             alert("Requête effectuée");
         })
+
+    $('#carrousel').slick({ //https://www.jqueryscript.net/slider/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick.html
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+            }
+        }, {
+            breakpoint: 870,
+            settings: {
+                slidesToShow: 1,
+                dots: true,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                centerMode: true
+            }
+        }]
+    });
+
+    $(".dropbtn").on("click", function() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    });
 })
 
