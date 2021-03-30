@@ -43,16 +43,17 @@ $(document).ready(function () {
             alert("Requête effectuée");
         })
 
-    $('#carrousel').slick({
+    $('#carrousel').slick({ //https://www.jqueryscript.net/slider/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick.html
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 3000,
         dots: true,
 
         responsive: [{
-            breakpoint: 1300,
+            breakpoint: 1200,
             settings: {
                 slidesToShow: 2,
                 infinite: true,
@@ -60,15 +61,20 @@ $(document).ready(function () {
                 autoplaySpeed: 3000,
             }
         }, {
-            breakpoint: 700,
+            breakpoint: 870,
             settings: {
                 slidesToShow: 1,
                 dots: true,
                 infinite: true,
                 autoplay: true,
                 autoplaySpeed: 3000,
+                centerMode: true
             }
         }]
+    });
+
+    $(".dropbtn").on("click", function() {
+        document.getElementById("myDropdown").classList.toggle("show");
     });
 })
 
