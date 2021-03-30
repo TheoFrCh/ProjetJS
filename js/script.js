@@ -50,7 +50,25 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 3000,
         dots: true,
-        arrows: true
+
+        responsive: [{
+            breakpoint: 1300,
+            settings: {
+                slidesToShow: 2,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+            }
+        }, {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 1,
+                dots: true,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+            }
+        }]
     });
 })
 
