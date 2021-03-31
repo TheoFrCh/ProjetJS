@@ -30,7 +30,7 @@ $(document).ready(function () {
                 carte.classList.add("carte")
                 carte.append(titre, desc, directeur, producteur, date, duree)
 
-                $("#feed").append(carte) //replacer tout les éléments à l'interieur de mon id #feed par la balise h3 créée
+                $("#feed").append(carte) //responselacer tout les éléments à l'interieur de mon id #feed par la balise h3 créée
 
             });
         })
@@ -73,8 +73,23 @@ $(document).ready(function () {
         }]
     });
 
-    $(".dropbtn").on("click", function() {
+    $(".dropbtn").on("click", function () {
         document.getElementById("myDropdown").classList.toggle("show");
     });
+
+    function afficher() {
+        const commentaire = document.querySelector('#comment').value; 
+        const showCom = document.createElement('div'); 
+        const contenu = document.createElement('p'); 
+        contenu.textContent = commentaire + " "; 
+        showCom.appendChild(contenu); 
+        const response = document.querySelector(".response"); 
+        response.appendChild(contenu); 
+    }
+
+    document.querySelector('#button').addEventListener('click', function() {
+        afficher();
+    })
+
 })
 
