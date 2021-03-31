@@ -44,7 +44,7 @@ $(document).ready(function () {
         })
 
     $('#carrousel').slick({ //https://www.jqueryscript.net/slider/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick.html
-        infinite: false,
+        infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,

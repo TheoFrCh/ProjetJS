@@ -8,7 +8,9 @@ header {
     position: center;
 }
 
-
+main {
+  background-color: black;
+}
 .carrousel {
     align-items: center;
 }
@@ -25,7 +27,7 @@ footer {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .carte {
-    border: solid #ead6b1 14px;
+    border: solid #3498DB 3px;
     margin-bottom: 20px;
 }
 .dropbtn {
