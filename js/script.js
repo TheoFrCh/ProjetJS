@@ -4,7 +4,7 @@ $(document).ready(function () {
         method: "GET",
         dataType: "json",
 
-
+//Feed
     })
 
         .done(function (response) {//lorsque ma requête réussi 
@@ -48,7 +48,7 @@ $(document).ready(function () {
       //  .always(function () { //à chaque requête
       //      alert("Requête effectuée");
       //  })
-
+//Carrousel
     $('#carrousel').slick({ //https://www.jqueryscript.net/slider/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick.html
         infinite: true,
         slidesToShow: 3,
@@ -78,12 +78,12 @@ $(document).ready(function () {
             }
         }]
     });
-
+//bouton drop down
     $(".dropbtn").on("click", function () {
         document.getElementById("myDropdown").classList.toggle("show");
     });
 
-
+//Ajouter un commentaire
     function afficher() {
         const film = document.querySelector('#film-select').value;
         console.log(film);
@@ -101,15 +101,26 @@ $(document).ready(function () {
         afficher();
     })
 
+
+
+//GALERIE
+
+let galerie = [
+    "https://www.studioghibli.fr/wp-content/uploads/2009/07/pompoko-wallpaper-2.jpg",
+    "https://www.studioghibli.fr/wp-content/uploads/2009/07/porco-rosso-wallpaper.jpg",
+    "https://www.studioghibli.fr/wp-content/uploads/2009/07/princesse-mononoke-wallapaper.jpg",
+    "https://www.studioghibli.fr/wp-content/uploads/2009/07/le-voyage-de-chihiro-wallpaper.jpg",
+    "https://www.studioghibli.fr/wallpapers/totoro_wallpaper.jpg",
+    "https://studioghiblimovies.com/wp-content/uploads/2020/03/D7K2JWwWkAAnpa82.jpg"
+];
+function showImg(){
+    galerie.forEach(element =>{
+        console.log(element)
+        const divImg = document.createElement("div");
+        const imageImg = document.createElement("img");
+        divImg.innerHTML = element;
+        divImg.classList.add("carte");
+        $("#galerie").append(divImg,imageImg);
+    })
+}
 })
-
-//GALLERIE
-
-//const gallerie [
-//    "https://www.studioghibli.fr/wp-content/uploads/2009/07/pompoko-wallpaper-2.jpg",
-//    "https://www.studioghibli.fr/wp-content/uploads/2009/07/porco-rosso-wallpaper.jpg",
-//    "https://www.studioghibli.fr/wp-content/uploads/2009/07/princesse-mononoke-wallapaper.jpg",
-//    "https://www.studioghibli.fr/wp-content/uploads/2009/07/le-voyage-de-chihiro-wallpaper.jpg",
-//    "https://www.studioghibli.fr/wallpapers/totoro_wallpaper.jpg",
-//    "https://studioghiblimovies.com/wp-content/uploads/2020/03/D7K2JWwWkAAnpa82.jpg"
-//]
