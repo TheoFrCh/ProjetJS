@@ -45,9 +45,9 @@ $(document).ready(function () {
             alert("La requête s'est terminée en échec. Infos : " + JSON.stringify(error));
         })
 
-        .always(function () { //à chaque requête
-            alert("Requête effectuée");
-        })
+      //  .always(function () { //à chaque requête
+      //      alert("Requête effectuée");
+      //  })
 
     $('#carrousel').slick({ //https://www.jqueryscript.net/slider/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick.html
         infinite: true,
@@ -103,3 +103,13 @@ $(document).ready(function () {
 
 })
 
+//GALLERIE
+
+//const gallerie [
+//    "https://www.studioghibli.fr/wp-content/uploads/2009/07/pompoko-wallpaper-2.jpg",
+//    "https://www.studioghibli.fr/wp-content/uploads/2009/07/porco-rosso-wallpaper.jpg",
+//    "https://www.studioghibli.fr/wp-content/uploads/2009/07/princesse-mononoke-wallapaper.jpg",
+//    "https://www.studioghibli.fr/wp-content/uploads/2009/07/le-voyage-de-chihiro-wallpaper.jpg",
+//    "https://www.studioghibli.fr/wallpapers/totoro_wallpaper.jpg",
+//    "https://studioghiblimovies.com/wp-content/uploads/2020/03/D7K2JWwWkAAnpa82.jpg"
+//]
