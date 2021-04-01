@@ -9,7 +9,9 @@ $(document).ready(function () {
 
         .done(function (response) {//lorsque ma requête réussi 
             console.log(response) //affiche la response dans la console
+            const selectFilm = document.getElementById("film-select")
             response.forEach(element => { //pour chaque element du tableau de mon api
+                const option = document.createElement("option")
                 const carte = document.createElement("div")
                 const titre = document.createElement("h3") //crée une variable titre qui sera un élément h3 dans le document
                 const desc = document.createElement("p")
@@ -26,11 +28,15 @@ $(document).ready(function () {
                 date.innerHTML = "Date de sortie :" + element.release_date
                 duree.innerHTML = "Durée : " + element.running_time
                 note.innerHTML = "Score Rotten tomatoes : " + element.rt_score
+                option.innerHTML = element.title
+                option.value = element.id
 
+                carte.id=element.id
                 carte.classList.add("carte")
                 carte.append(titre, desc, directeur, producteur, date, duree)
+                selectFilm.append(option)
 
-                $("#feed").append(carte) //replacer tout les éléments à l'interieur de mon id #feed par la balise h3 créée
+                $("#feed").append(carte) //responselacer tout les éléments à l'interieur de mon id #feed par la balise h3 créée
 
             });
         })
@@ -44,7 +50,7 @@ $(document).ready(function () {
         })
 
     $('#carrousel').slick({ //https://www.jqueryscript.net/slider/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick.html
-        infinite: false,
+        infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
@@ -73,8 +79,27 @@ $(document).ready(function () {
         }]
     });
 
-    $(".dropbtn").on("click", function() {
+    $(".dropbtn").on("click", function () {
         document.getElementById("myDropdown").classList.toggle("show");
     });
+
+
+    function afficher() {
+        const film = document.querySelector('#film-select').value;
+        console.log(film);
+        const carte = document.getElementById(film)
+        const commentaire = document.querySelector('#coment').value; 
+        const showCom = document.createElement('div'); 
+        const contenu = document.createElement('p');
+        contenu.textContent = "Commentaire : " + commentaire + " "; 
+        showCom.appendChild(contenu);
+        carte.appendChild(showCom) 
+    }
+
+    document.querySelector('#button').addEventListener('click', function(event) {
+        event.preventDefault();
+        afficher();
+    })
+
 })
 

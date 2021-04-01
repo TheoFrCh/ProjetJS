@@ -39,20 +39,28 @@
         </ul>
 
     </section>
-    <form action="POST">
-        <textarea name="new_article" id="new_article"></textarea>
-        <button>Publier</button>
-    </form>
-    <img src="images/rafraichir.svg" alt="rafraichir" width="2%" height="2%">
-    <section>
-        <article>
-            <div id="feed"></div>
-        </article>
-    </section>
+    <main>
+        <section>
+            <form>
+                <select name="film" id="film-select">
+                    <option value="0">Choisissez un film</option>
+                </select>
+                <textarea id="coment" type="text" cols="50" rows="5"
+                    placeholder="Que pensez-vous de ce film?"></textarea>
+                <button id="button">publier</button>
+                
+            </form>
+            <div class="response"></div>
+            <article>
+                <div id="feed"></div>
+            </article>
+        </section>
 
-    <footer>
-        <p>copyright Théo</p>
-    </footer>
+        <footer>
+            <p>footer vraiment beau</p>
+        </footer>
+
+    </main>
 
 
 </body>
