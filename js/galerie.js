@@ -37,13 +37,29 @@ $(document).ready(function () {
     function addImg() {
         const commentaire = document.querySelector('#addImage').value;
         const addedImg = document.createElement("img");
+        const classtoadd = ['triGalerie','addedImage']
+        addedImg.classList.add(...classtoadd);
         addedImg.src = commentaire
-        addedImg.classList.add("triGalerie");
         $("#galerie").append(addedImg)
     }
     document.querySelector('#sendImg').addEventListener('click', function (event) {
         event.preventDefault();
         addImg();
     })
+
+    function removeImg(){
+        const imgToRm = document.querySelectorAll(".addedImage")
+        console.log(imgToRm)
+        imgToRm.forEach(element => {
+            console.log(element)
+            element.remove();
+        });
+        
+    }
+    document.querySelector('#rmImage').addEventListener('click', function (event) {
+        event.preventDefault();
+        removeImg();
+    })
+    
 
 })
