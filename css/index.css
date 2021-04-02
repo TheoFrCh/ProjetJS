@@ -75,27 +75,29 @@ footer {
 
   .show {display:block;}
 
-  
-.galerie{
-  display: flex;
-  justify-content:center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
 
-.galerie img{
-  height: 100vh;
-  max-width: 100%;
-}
+  #galerie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 
+  }
+  .triGalerie{
+    height: 450px;
+    width: 500px;
+  }
 
-.galerie2{
-  display: flex;
-  justify-content:center;
-  flex-wrap: wrap;
-}
-
-.galerie2 img{
-  height: 20vw;
-  width: auto;
-}
+  .column{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
