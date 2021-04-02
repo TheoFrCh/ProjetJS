@@ -11,6 +11,7 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!--Je lie mon doc avec jQuery-->
 </head>
+
 <body>
     <header>
         <div class="dropdown">
@@ -22,14 +23,18 @@
             </div>
         </div>
     </header>
-<section>
-<h2>Gallerie des Films</h2>
-<button class="listButton"><img src="images/layout.png" height="20px" width="20px">List</button>
-<button class="gridButton"><img src="images/visualization.png" height="20px" width="20px"> Grid</button>
-<div id="galerie"></div>
+    <section>
+        <h2>Gallerie des Films</h2>
+        <button class="listButton"><img src="images/layout.png" height="20px" width="20px">List</button>
+        <button class="gridButton"><img src="images/visualization.png" height="20px" width="20px"> Grid</button>
+        <form><textarea id="addImage" type="link" cols="50" rows="1"
+                placeholder="Ajoutez le lien d'une image"></textarea>
+            <button id="sendImg">Envoyer</button>
+        </form>
+        <div id="galerie"></div>
 
 
-</section>
+    </section>
     <footer>
         <p>footer vraiment beau</p>
     </footer>

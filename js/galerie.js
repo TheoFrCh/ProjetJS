@@ -27,11 +27,23 @@ $(document).ready(function () {
     showImg()
 
     $(".listButton").on("click", function () {
-        document.getElementById("galerie").className="column";
+        document.getElementById("galerie").className = "column";
     })
 
     $(".gridButton").on("click", function () {
-        document.getElementById("galerie").className="grid";
+        document.getElementById("galerie").className = "grid";
+    })
+
+    function addImg() {
+        const commentaire = document.querySelector('#addImage').value;
+        const addedImg = document.createElement("img");
+        addedImg.src = commentaire
+        addedImg.classList.add("triGalerie");
+        $("#galerie").append(addedImg)
+    }
+    document.querySelector('#sendImg').addEventListener('click', function (event) {
+        event.preventDefault();
+        addImg();
     })
 
 })
