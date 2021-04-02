@@ -4,7 +4,7 @@ $(document).ready(function () {
         method: "GET",
         dataType: "json",
 
-
+//Feed
     })
 
         .done(function (response) {//lorsque ma requête réussi 
@@ -45,10 +45,10 @@ $(document).ready(function () {
             alert("La requête s'est terminée en échec. Infos : " + JSON.stringify(error));
         })
 
-        .always(function () { //à chaque requête
-            alert("Requête effectuée");
-        })
-
+      //  .always(function () { //à chaque requête
+      //      alert("Requête effectuée");
+      //  })
+//Carrousel
     $('#carrousel').slick({ //https://www.jqueryscript.net/slider/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick.html
         infinite: true,
         slidesToShow: 3,
@@ -78,12 +78,12 @@ $(document).ready(function () {
             }
         }]
     });
-
+//bouton drop down
     $(".dropbtn").on("click", function () {
         document.getElementById("myDropdown").classList.toggle("show");
     });
 
-
+//Ajouter un commentaire
     function afficher() {
         const film = document.querySelector('#film-select').value;
         console.log(film);
